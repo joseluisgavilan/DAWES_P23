@@ -15,6 +15,8 @@ namespace p2.Tests.Controllers
         [TestMethod]
         public void Index()
         {
+
+            //NO COMPILA
             // Arrange
             HomeController controller = new HomeController();
 
