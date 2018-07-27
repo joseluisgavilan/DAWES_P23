@@ -16,7 +16,7 @@ namespace p2.Tests.Controllers
         public void Index()
         {
 
-            //NO COMPILA
+    
             // Arrange
             HomeController controller = new HomeController();
 
