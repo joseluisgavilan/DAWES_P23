@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    var pelicula = ViewBag.Pelicula;
+    var ListaPeliculas = ViewBag.ListaPeliculas;
+}
+
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<hr/>
+<h2>Esta es mi película favorita</h2>
+<h3>Título</h3>
+<p>@pelicula.Titulo</p>
+<h3>Año</h3>
+<p>@pelicula.Año</p>
+<h3>Dirección</h3>
+<p>@pelicula.Dirección.Nombre @pelicula.Dirección.Apellido</p>
+<hr />
+
+<h2>Listado de películas del sistema</h2>
+<table class="table table-striped" >
+    <thead>
+        <td  scope="col">Título</td>
+        <td  scope="col">Año</td>
+        <td  scope="col">Director</td>
+    </thead>
+    @{ foreach (var peli in ListaPeliculas)
+        {
+            <tr >
+                <td >@peli.Titulo</td>
+                <td>@peli.Año</td>
+                <td >@peli.Dirección.Nombre @peli.Dirección.Apellido</td>
+            </tr>
+        }
+    }
+        
+     
+</table>

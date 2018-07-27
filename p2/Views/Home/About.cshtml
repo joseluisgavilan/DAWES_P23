@@ -1,0 +1,36 @@
+﻿@{
+    
+    var Director = ViewBag.Director;
+    var Actor = ViewBag.Actor;
+    var ListaPersonas = ViewBag.ListaPersonas;
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+
+<hr />
+<h3>Director favorito</h3>
+<p>@Director.Nombre @Director.Apellido</p>
+<h3>Actor favorito</h3>
+<p>@Actor.Nombre @Actor.Apellido</p>
+
+<hr />
+<h2>Listado de directores/as, actrices y actores del sistema</h2>
+<table class="table table-striped">
+    <thead >
+    <td>Nombre</td>
+    <td>Apellido</td>
+    <td>Año de Nacimiento</td>
+    </thead>
+    @{ foreach (var persona in ListaPersonas)
+        {
+            <tr >
+                <td >@persona.Nombre</td>
+                <td >@persona.Apellido</td>
+                <td >@persona.AñoNacimiento</td>
+            </tr>
+        }
+    }
+
+
+</table>
