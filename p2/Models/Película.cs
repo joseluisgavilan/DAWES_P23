@@ -46,9 +46,9 @@ namespace p2.Models
         }
 
 
-        public static Película[] GetListaPelículas()
+        public static List<Película> GetListaPelículas()
         {
-            Película[] ArrayPelis=new Película[3];
+            List<Película> ListaPelis =new List<Película>();
 
             Película p = new Película
             {
@@ -57,7 +57,7 @@ namespace p2.Models
                 Año = 2004
             };
 
-            ArrayPelis[0] = p;
+            ListaPelis.Add(p);
 
              p = new Película
             {
@@ -65,7 +65,7 @@ namespace p2.Models
                 Dirección = new Persona("Wong ", "Kar Wai", 1958),
                 Año = 2000
             };
-            ArrayPelis[1] = p;
+            ListaPelis.Add(p);
 
             p = new Película
             {
@@ -73,10 +73,10 @@ namespace p2.Models
                 Dirección = new Persona("Wong ", "Kar Wai", 1958),
                 Año = 2007
             };
-            ArrayPelis[2] = p;
+            ListaPelis.Add(p);
 
-            
-            return ArrayPelis;
+
+            return ListaPelis;
 
         }
 

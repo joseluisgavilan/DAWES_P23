@@ -23,7 +23,7 @@ namespace p2.Tests.Controllers
             // Act
             ViewResult result = controller.Index() as ViewResult;
             //otro comentario
-            //cosas nuevas
+            //cosas nuev
             // Assert
             Assert.IsNotNull(result);
         }
